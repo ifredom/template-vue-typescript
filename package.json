@@ -5,11 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "vue-cli-service test",
+    "e2e": "vue-cli-service e2e",
+    "prettier": "prettier --config ./.prettierrc --write 'src/**/*.ts' 'src/**/*.vue' "
   },
   "dependencies": {
+    "@types/nprogress": "^0.0.29",
+    "axios": "^0.18.0",
+    "nprogress": "^0.2.0",
+    "qs": "^6.6.0",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
+    "vue-meta": "^1.5.8",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
