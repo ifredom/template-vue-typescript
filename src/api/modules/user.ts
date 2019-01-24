@@ -1,28 +1,14 @@
-import { _get, _post, _delete } from './index';
+import Api from '../commonUtils';
 
-// 登录
-export const login = (data: any) => {
-  const req = {
-    data,
-    url: 'admin/user_login',
-  };
-  return _post(req);
+// 登陆
+export const login = (params: object) => {
+  return Api.request('/admin/user_login', params, 'post');
 };
-
-// 获取用户信息
-export const userInfo = (data: any) => {
-  const req = {
-    data,
-    url: 'admin/user_info',
-  };
-  return _get(req);
+// 用户信息
+export const userInfo = (params: object) => {
+  return Api.request('/admin/user_login', params, 'get');
 };
-
 // 改变用户头像
-export const changeAvatar = (data: any) => {
-  const req = {
-    data,
-    url: 'admin/change_avatar',
-  };
-  return _post(req);
+export const changeAvatar = (params: object) => {
+  return Api.request('/admin/change_avatar', params, 'post');
 };

@@ -15,8 +15,11 @@ const routes = [
       },
       {
         path: '/login',
-        /* Asynchronous loading components */
-        component: (r: any) => (require as any).ensure([], () => r(require('@/views/Login')), 'Login')
+        component: (r: any) => (require as any).ensure([], () => r(require('@/views/login/Login')), 'Login')
+      },
+      {
+        path: '/about',
+        component: (r: any) => (require as any).ensure([], () => r(require('@/views/about/About')), 'about')
       }
     ]
   }

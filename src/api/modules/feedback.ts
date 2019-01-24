@@ -1,10 +1,6 @@
-import { _post } from './index';
+import Api from '../commonUtils';
 
 // 反馈
-export const feedback = (data: any) => {
-  const req = {
-    data,
-    url: 'feedback',
-  };
-  return _post(req);
+export const feedback = (params: object) => {
+  return Api.request('/article/detail', params, 'get');
 };

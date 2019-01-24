@@ -1,11 +1,6 @@
-import { _post } from './index';
+import Api from '../commonUtils';
 
 // 同步
-export const sync = (data: any) => {
-  console.log(data);
-  const req = {
-    data,
-    url: 'sync',
-  };
-  return _post(req);
+export const sync = (params: object) => {
+  return Api.request('/sync', params, 'post');
 };
